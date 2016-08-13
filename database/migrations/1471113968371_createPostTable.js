@@ -2,15 +2,13 @@
 
 const Schema = use('Schema');
 
-class ShowSchema extends Schema {
+class CreatePostTableSchema extends Schema {
 
   up() {
-    this.create('shows', (table) => {
+    this.create('posts', (table) => {
       table.increments();
       table.string('title');
-      table.integer('ep_time');
-      table.integer('num_ep');
-      table.boolean('is_movie');
+      table.text('body');
 
       table.integer('user_id');
 
@@ -24,4 +22,4 @@ class ShowSchema extends Schema {
 
 }
 
-module.exports = ShowSchema;
+module.exports = CreatePostTableSchema;
