@@ -1,6 +1,11 @@
 // @import 'yoga';
 // @import 'normalize';
-
-// $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
-// @import 'font-awesome';
+$max-content-width: 60rem;
+$min-content-width: 10rem;
+$gutter: 1rem;
+$fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
+@import 'font-awesome';
 @import 'box-sizing';
+@import 'header';
+@import 'footer';
+@import 'content';

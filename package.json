@@ -21,6 +21,7 @@
     "adonis-lucid": "^3.0.3",
     "adonis-middleware": "^1.0.7",
     "pg": "^6.1.0",
+    "sass-lint": "^1.8.2",
     "youch": "^1.0.1"
   },
   "autoload": {
