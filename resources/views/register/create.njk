@@ -1,9 +1,31 @@
 {% extends "master" %}
 
 {% block content %}
-  <div class="content">
     <div class="container">
-      <h2>register</h2>
+      <form class="form register-form" action="/register" method="post">
+        {{ csrfField }}
+        <h2 class="title">Register for an account:</h2>
+
+        <div class="form__field">
+          <label for="email" class='form__field--label'>Email:</label>
+          <input type="text" name='email' value="{{ old('email') }}" class='form__field--input'>
+        </div>
+
+        <div class="form__field">
+          <label for="username" class='form__field--label'>Username:</label>
+          <input type="text" name="username" value="{{ old('username') }}" class='form__field--input'>
+        </div>
+
+
+        <div class="form__field">
+          <label for="password" class='form__field--label'>Password:</label>
+          <input type="password" name="password" class='form__field--input'>
+        </div>
+
+        <div class="form__controls">
+          <a href="/" class='btn__cancel'>CANCEL</a>
+          <button type="submit" name="submit" class='btn__submit'>SUBMIT</button>
+        </div>
+      </form>
     </div>
-  </div>
 {% endblock %}

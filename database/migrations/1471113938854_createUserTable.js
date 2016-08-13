@@ -8,6 +8,7 @@ class CreateUserTableSchema extends Schema {
     this.create('users', (table) => {
       table.increments();
       table.string('email', 254).notNullable().unique();
+      table.string('username', 254).notNullable().unique();
       table.string('password', 60).notNullable();
       table.timestamps();
     });

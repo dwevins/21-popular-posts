@@ -8,7 +8,7 @@ class User extends Lucid {
     return this.hasMany('App/Model/Token');
   }
 
-  shows() {
+  posts() {
     return this.hasMany('App/Model/Post');
   }
 
