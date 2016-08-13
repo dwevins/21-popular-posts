@@ -1,21 +1,25 @@
-'use strict'
+'use strict';
 
-const Schema = use('Schema')
+const Schema = use('Schema');
 
-class CreateTokenTableSchema extends Schema {
+class TokenSchema extends Schema {
 
-  up () {
-    this.table('create_token_table', (table) => {
-      // alter create_token_table table
-    })
+  up() {
+    this.create('tokens', (table) => {
+      table.increments();
+      table.integer('user_id').unsigned().references('id').inTable('users');
+      table.string('token', 40).notNullable().unique();
+      table.boolean('forever').defaultTo(false);
+      table.boolean('is_revoked').defaultTo(false);
+      table.timestamp('expiry');
+      table.timestamps();
+    });
   }
 
-  down () {
-    this.table('create_token_table', (table) => {
-      // opposite of up goes here
-    })
+  down() {
+    this.drop('tokens');
   }
 
 }
 
-module.exports = CreateTokenTableSchema
+module.exports = TokenSchema;

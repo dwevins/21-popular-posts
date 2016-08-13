@@ -1,21 +1,22 @@
-'use strict'
+'use strict';
 
-const Schema = use('Schema')
+const Schema = use('Schema');
 
 class CreateUserTableSchema extends Schema {
 
-  up () {
-    this.table('create_user_table', (table) => {
-      // alter create_user_table table
-    })
+  up() {
+    this.create('users', (table) => {
+      table.increments();
+      table.string('email', 254).notNullable().unique();
+      table.string('password', 60).notNullable();
+      table.timestamps();
+    });
   }
 
-  down () {
-    this.table('create_user_table', (table) => {
-      // opposite of up goes here
-    })
+  down() {
+    this.drop('users');
   }
 
 }
 
-module.exports = CreateUserTableSchema
+module.exports = CreateUserTableSchema;
