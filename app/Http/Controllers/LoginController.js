@@ -5,7 +5,7 @@ const Hash = use('Hash');
 
 class LoginController {
   * create(req, res) {
-    yield res.sendView('user.create');
+    yield res.sendView('login.create');
   }
 
 }
