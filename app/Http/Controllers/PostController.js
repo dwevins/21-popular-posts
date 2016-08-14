@@ -9,7 +9,13 @@ class PostController {
   }
 
   * create(req, res) {
-    yield res.sendView('post.create');
+    const isLoggedIn = yield req.auth.check();
+    console.log(isLoggedIn);
+    if (isLoggedIn === false) {
+      res.redirect('/unauthorized');
+    } else {
+      yield res.sendView('post.create');
+    }
   }
 
   * store(req, res) {

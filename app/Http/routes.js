@@ -28,5 +28,7 @@ Route.any('/logout', 'LoginController.destroy');
 
 Route.get('/post', 'PostController.index');
 
-Route.get('/post/create', 'PostController.create').middleware('auth');
-Route.post('/post/create', 'PostController.store').middleware('auth');
+Route.get('/post/create', 'PostController.create');
+Route.post('/post/create', 'PostController.store');
+
+Route.get('/unauthorized', 'CustomErrorController.noAuth');
