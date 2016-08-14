@@ -26,6 +26,7 @@ Route.get('/login', 'LoginController.create');
 Route.post('/login', 'LoginController.store');
 Route.any('/logout', 'LoginController.destroy');
 
-Route.group('logged-in', () => {
-  Route.resource('/post', 'PostController');
-}).middleware('auth');
+Route.get('/post', 'PostController.index');
+
+Route.get('/post/create', 'PostController.create').middleware('auth');
+Route.post('/post/create', 'PostController.store').middleware('auth');

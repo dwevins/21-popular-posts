@@ -18,8 +18,7 @@ class LoginController {
 
       res.redirect('/post');
     } catch (e) {
-      yield req.withAll()
-      .andWith({ error: 'Email and password do not match' })
+      yield req.withAll().andWith({ error: 'Email and password do not match' })
       .flash();
 
       res.redirect('back');
@@ -27,8 +26,9 @@ class LoginController {
   }
 
   * destroy(req, res) {
-    yield req
-    .with({ success: 'logged out' })
+    yield req.auth.logout();
+
+    yield req.with({ success: 'logged out' })
     .flash();
 
     res.redirect('/login');
