@@ -8,6 +8,7 @@
       {% for post in posts %}
         <h3 class="post-title">{{ post.title }}</h3>
         <p class="post-content">{{ post.body }}</p>
+        <p class="post-owner">{{ post.user.username }}</p>
       {% endfor %}
 
     </div>
