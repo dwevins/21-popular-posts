@@ -5,6 +5,11 @@
     <div class="row">
       <h2 class="page-title">posts</h2>
       <a href="/post/create" class="create-link">new post</a>
+      {% for post in posts %}
+        <h3 class="post-title">{{ post.title }}</h3>
+        <p class="post-content">{{ post.body }}</p>
+      {% endfor %}
+
     </div>
   </div>
 {% endblock %}
