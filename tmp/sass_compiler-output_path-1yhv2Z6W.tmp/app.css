@@ -2213,5 +2213,11 @@ body {
   min-width: 10rem;
   margin: 0 auto; }
 
+.header {
+  background-color: #5c6bc0; }
+
+.footer {
+  background-color: #5c6bc0; }
+
 .content {
   flex-grow: 1; }
