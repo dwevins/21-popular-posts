@@ -2215,9 +2215,23 @@ body {
 
 .header {
   background-color: #5c6bc0; }
+  .header-contents {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
 
 .footer {
-  background-color: #5c6bc0; }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; }
+  .footer-top {
+    background-color: #5967b5; }
+  .footer-bottom {
+    background-color: #5c6bc0; }
+    .footer-bottom__content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
 
 .content {
   flex-grow: 1; }

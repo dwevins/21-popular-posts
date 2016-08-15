@@ -41,15 +41,19 @@
 
       {% block footer %}
         <div class="footer">
-          <div class="container">
             <div class="footer-top">
-                <h3 class="disclaimer"></h3>
+              <div class="container">
+                <h3 class="disclaimer">Definitely not a reddit clone</h3>
+              </div>
             </div>
             <div class="footer-bottom">
-              <p class="copyright">&copy; 2016 copyright text</p>
-              <a href="#" class="more-links">More Links</a>
+              <div class="container">
+                <div class="footer-bottom__content">
+                  <p class="copyright">&copy; 2016 copyright text</p>
+                  <a href="#" class="more-links">More Links</a>
+                </div>
+              </div>
             </div>
-          </div>
         </div>
       {% endblock %}
     </div>
