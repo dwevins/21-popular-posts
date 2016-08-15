@@ -20,8 +20,13 @@
             <div class="header-contents">
               <h3 class="title">Popular Posts</h3>
               <div class="header-contents__links">
-                <a href="/login">Login</a>
-                <a href="/register">Register</a>
+                {% if currentUser %}
+                  <a href="/posts">Posts</a>
+                  <a href="/logout">Logout</a>
+                {% else %}
+                  <a href="/login">Login</a>
+                  <a href="/register">Register</a>
+                {% endif %}
               </div>
             </div>
           </div>
