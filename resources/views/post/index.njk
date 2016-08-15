@@ -2,15 +2,20 @@
 
 {% block content %}
   <div class="container">
-    <div class="row">
-      <h2 class="page-title">posts</h2>
-      <a href="/post/create" class="create-link">new post</a>
-      {% for post in posts %}
-        <h3 class="post-title">{{ post.title }}</h3>
-        <p class="post-content">{{ post.body }}</p>
-        <p class="post-owner">{{ post.user.username }}</p>
-      {% endfor %}
-
-    </div>
+      <div class="row">
+        <div class="title-row post-item">
+          <h2 class="page-title">posts</h2>
+          <a href="/post/create" class="create-link fa fa-plus"></a>
+        </div>
+        <div class="post-row">
+          {% for post in posts %}
+            <div class="post-item">
+              <h3 class="post-item__title">{{ post.title }}</h3>
+              <p class="post-item__content">{{ post.body }}</p>
+              <p class="post-item__owner">{{ post.user.username }}</p>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
   </div>
 {% endblock %}

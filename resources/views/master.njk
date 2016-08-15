@@ -21,11 +21,11 @@
               <h3 class="title">Popular Posts</h3>
               <div class="header-contents__links">
                 {% if currentUser %}
-                  <a href="/posts">Posts</a>
-                  <a href="/logout">Logout</a>
+                  <a href="/posts" class="links links-left">Posts</a>
+                  <a href="/logout" class="links links-right">Logout</a>
                 {% else %}
-                  <a href="/login">Login</a>
-                  <a href="/register">Register</a>
+                  <a href="/login" class="links links-left">Login</a>
+                  <a href="/register" class="links links-right">Register</a>
                 {% endif %}
               </div>
             </div>
@@ -50,7 +50,7 @@
               <div class="container">
                 <div class="footer-bottom__content">
                   <p class="copyright">&copy; 2016 copyright text</p>
-                  <a href="#" class="more-links">More Links</a>
+                  <a href="#" class="links more-links">More Links</a>
                 </div>
               </div>
             </div>

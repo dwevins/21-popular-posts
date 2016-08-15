@@ -1,0 +1,13 @@
+.post {
+
+  &-item {
+    border: 1px solid $gray;
+    padding: $gutter;
+  }
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
