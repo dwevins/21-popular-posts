@@ -26,9 +26,13 @@ Route.get('/login', 'LoginController.create');
 Route.post('/login', 'LoginController.store');
 Route.any('/logout', 'LoginController.destroy');
 
-Route.get('/post', 'PostController.index');
+Route.group('logged-in', () => {
+  Route.resource('/post', 'PostController');
+}).middleware('auth');
 
-Route.get('/post/create', 'PostController.create');
-Route.post('/post/create', 'PostController.store');
-
-Route.get('/unauthorized', 'CustomErrorController.noAuth');
+// Route.get('/post', 'PostController.index');
+// Route.post('/post', 'PostController.store');
+//
+// Route.get('/post/create', 'PostController.create');
+//
+// Route.get('/unauthorized', 'CustomErrorController.noAuth');

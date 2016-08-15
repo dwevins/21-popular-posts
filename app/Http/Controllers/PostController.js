@@ -10,7 +10,6 @@ class PostController {
 
   * create(req, res) {
     const isLoggedIn = yield req.auth.check();
-    console.log(isLoggedIn);
     if (isLoggedIn === false) {
       res.redirect('/unauthorized');
     } else {
@@ -20,7 +19,6 @@ class PostController {
 
   * store(req, res) {
     const { title, body } = req.all();
-
     yield req.authUser.posts().create({ title, body });
     yield req.with({ success: 'Post created successfully' })
     .flash();
