@@ -3,16 +3,23 @@
 {% block content %}
   <div class="container">
       <div class="row">
-        <div class="title-row post-item">
+      <div class="title-row post-item">
           <h2 class="page-title">posts</h2>
           <a href="/post/create" class="create-link fa fa-plus"></a>
         </div>
         <div class="post-row">
           {% for post in posts %}
             <div class="post-item">
-              <h3 class="post-item__title">{{ post.title }}</h3>
-              <p class="post-item__content">{{ post.body }}</p>
-              <p class="post-item__owner">{{ post.user.username }}</p>
+              <div class="post-item__left">
+                <span class="fa fa-thumbs-up post-item__left--btn"></span>
+                <p class="post-item__left--rating">{{ post.rating }}</p>
+                <span class="fa fa-thumbs-down post-item__left--btn"></span>
+              </div>
+              <div class="post-item__right">
+                <h3 class="post-item__right--title">{{ post.title }}</h3>
+                <a href="/post" class='read-more'>Read More</a>
+                <p class="post-item__right--owner">{{ post.user.username }}</p>
+              </div>
             </div>
           {% endfor %}
         </div>

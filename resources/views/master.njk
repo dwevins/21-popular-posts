@@ -34,6 +34,17 @@
       {% endblock %}
 
       <div class="content">
+        {% if old('success') %}
+          <div class="container">
+            <p class="alert alert--success">Success: {{ old('success') }}</p>
+          </div>
+        {% endif %}
+
+        {% if old('error') %}
+            <div class="container">
+              <p class="alert alert--warning">Warning: {{ old('error') }}</p>
+            </div>
+        {% endif %}
         {% block content %}
         {#  defined in other views #}
         {% endblock %}

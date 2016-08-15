@@ -9,7 +9,7 @@ class CreatePostTableSchema extends Schema {
       table.increments();
       table.string('title');
       table.text('body');
-
+      table.number('rating').defaultTo(0);
       table.integer('user_id');
 
       table.timestamps();
