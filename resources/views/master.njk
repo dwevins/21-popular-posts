@@ -25,7 +25,7 @@
               </a>
               <div class="header-contents__links">
                 {% if currentUser %}
-                  <a href="/posts" class="links links-left">Posts</a>
+                  <a href="/post" class="links links-left">Posts</a>
                   <a href="/logout" class="links links-right">Logout</a>
                 {% else %}
                   <a href="/login" class="links links-left">Login</a>
@@ -73,6 +73,9 @@
       {% endblock %}
     </div>
   </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+
 
 </body>
 </html>
