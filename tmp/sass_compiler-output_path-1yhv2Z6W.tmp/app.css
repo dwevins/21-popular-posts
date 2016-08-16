@@ -2287,9 +2287,3 @@ h1 {
   .alert--warning {
     border-color: #ff8a80;
     background: #ff8a80; }
-
-.links__welcome--btn {
-  padding: 0.5rem;
-  background-color: #ff7043;
-  text-decoration: none;
-  color: #fff; }
