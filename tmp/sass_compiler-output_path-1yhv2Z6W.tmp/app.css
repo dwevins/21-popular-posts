@@ -2221,6 +2221,10 @@ body {
     align-items: center;
     justify-content: space-between; }
 
+.home-link {
+  text-decoration: none;
+  color: white; }
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -2256,8 +2260,14 @@ body {
   flex-grow: 1;
   padding: 1rem 0; }
 
+* {
+  font-family: sans-serif; }
+
 a {
   text-decoration: none; }
+
+h1 {
+  font-size: 3rem; }
 
 .links {
   color: #fff; }
@@ -2277,3 +2287,9 @@ a {
   .alert--warning {
     border-color: #ff8a80;
     background: #ff8a80; }
+
+.links__welcome--btn {
+  padding: 0.5rem;
+  background-color: #ff7043;
+  text-decoration: none;
+  color: #fff; }

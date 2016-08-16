@@ -1,0 +1,12 @@
+.links {
+
+  &__welcome{
+
+    &--btn {
+      padding: 0.5 * $gutter;
+      background-color: $orange;
+      text-decoration: none;
+      color: $white;
+    }
+  }
+}
