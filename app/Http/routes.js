@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +15,19 @@
 | Route.resource('user', 'UserController')
 */
 
-const Route = use('Route')
+const Route = use('Route');
 
-Route.on('/').render('welcome')
+Route.on('/').render('welcome');
+
+Route.get('/register', 'RegisterController.create');
+Route.post('/register', 'RegisterController.store');
+
+Route.get('/login', 'LoginController.create');
+Route.post('/login', 'LoginController.store');
+Route.any('/logout', 'LoginController.destroy');
+
+Route.get('/post', 'PostController.index');
+Route.post('/post', 'PostController.store').middleware('auth');
+Route.get('/post/create', 'PostController.create').middleware('auth');
+//
+// Route.get('/unauthorized', 'CustomErrorController.noAuth');

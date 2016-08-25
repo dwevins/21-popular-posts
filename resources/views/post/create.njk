@@ -1,0 +1,28 @@
+{% extends "master" %}
+
+{% block content %}
+  <div class="container">
+      <div class="card large">
+        <div class="card-content">
+          <h2 class="page-title">new post</h2>
+          <form action="/post" method='post' class="form new-post-form">
+            {{ csrfField }}
+            <div class="form__field">
+              <label for="title" class="form__field--label">Title:</label>
+              <input type="text" name="title" value="{{ old('title') }}" class="form__field--input">
+            </div>
+
+            <div class="form__field">
+              <label for="body" class="form__field--label">Post:</label>
+              <textarea name="body" value="{{ old('body') }}" class="materialize-textarea form__field--input"></textarea>
+            </div>
+
+            <div class="form__controls">
+              <a href="/post" class="waves-effect waves-light btn grey">CANCEL</a>
+              <button type='submit' class="btn waves-effect waves-light orange darken-3" name='submit'>SUBMIT</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
+{% endblock %}

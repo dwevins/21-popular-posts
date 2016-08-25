@@ -1,0 +1,25 @@
+.post {
+
+  &-item {
+    display: flex;
+    border: 1px solid $gray;
+    padding: $gutter;
+
+    &__left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__right {
+      padding-left: $gutter;
+    }
+  }
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

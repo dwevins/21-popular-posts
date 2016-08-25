@@ -1,0 +1,31 @@
+// apply a natural box layout model to all elements, but allowing components to change
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+.__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  width: calc(100% - #{$gutter});
+  max-width: $max-content-width;
+  min-width: $min-content-width;
+  margin: 0 auto;
+}

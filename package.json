@@ -4,7 +4,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --watch app --watch bootstrap --watch config --watch .env -x \"node --harmony_proxies\" server.js",
-    "start": "node --harmony_proxies server.js"
+    "start": "node --harmony_proxies server.js",
+    "assets:build": "ember build -o public/dist",
+    "assets:watch": "ember build -w -o public/dist"
   },
   "author": "",
   "license": "MIT",
@@ -19,6 +21,7 @@
     "adonis-lucid": "^3.0.3",
     "adonis-middleware": "^1.0.7",
     "pg": "^6.1.0",
+    "sass-lint": "^1.8.2",
     "youch": "^1.0.1"
   },
   "autoload": {

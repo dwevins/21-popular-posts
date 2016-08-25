@@ -1,0 +1,15 @@
+.header {
+  color: $white;
+  background-color: $purple;
+
+  &-contents {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.home-link {
+  text-decoration: none;
+  color: white;
+}
